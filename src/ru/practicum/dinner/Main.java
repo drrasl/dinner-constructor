@@ -53,11 +53,9 @@ public class Main {
         System.out.println("Введите количество наборов, которые нужно сгенерировать:");
         int numberOfCombos = scanner.nextInt();
         scanner.nextLine();
-
         System.out.println("Вводите типы блюда, разделяя символом переноса строки (enter). Для завершения "
                 + "ввода введите пустую строку");
         String nextItem = scanner.nextLine();
-
         //реализуйте ввод типов блюд
         while (!nextItem.isEmpty()) {
             if (dc.checkType(nextItem)) {
@@ -67,11 +65,9 @@ public class Main {
             }
             nextItem = scanner.nextLine();
         }
-
         // сгенерируйте комбинации блюд и выведите на экран
         Random random = new Random();
         ArrayList<String> typeRandomDish = new ArrayList<>();
-
         for (int i = 0; i < numberOfCombos; i++) {
             for (String type : typeDish) {
                 ArrayList<String> dishList = dc.menu.get(type);
