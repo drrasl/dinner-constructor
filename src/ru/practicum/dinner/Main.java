@@ -17,7 +17,7 @@ public class Main {
             printMenu();
             String command = scanner.nextLine();
 
-            switch (command) {
+            switch (command.trim()) { // rev.1 Добавлен метод trim() - добавили возможные пробелы
                 case "1":
                     addNewDish();
                     break;
@@ -25,7 +25,11 @@ public class Main {
                     generateDishCombo();
                     break;
                 case "3":
+                    System.out.println("Выход из программы. Благодарим за работу!"); // rev.1 Добавлен текст выхода
                     return;
+                default: // rev.1 Добавлен default блок
+                    System.out.println("Ошибка, пожалуйста, введите одну из перечисленных команд.");
+                    System.out.println();
             }
         }
     }

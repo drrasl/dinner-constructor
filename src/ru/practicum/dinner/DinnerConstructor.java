@@ -27,11 +27,7 @@ public class DinnerConstructor {
     }
 
     boolean checkType(String type) {
-        boolean exist = false;
 
-        if (menu.containsKey(type)) {
-            exist = true;
-        }
-        return exist;
+        return menu.containsKey(type); //rev.1 Блок кода сократил до 1 строки
     }
 }
